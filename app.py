@@ -9,7 +9,7 @@ from sklearn.datasets import load_iris
 iris = load_iris()
 
 # Load trained model
-model = joblib.load(r"C:\Users\admin\.conda\envs\myenv\iris_model.pkl")
+model = joblib.load("iris_model.pkl")
 
 st.title("🌸 Iris Flower Predictor")
 
@@ -26,4 +26,5 @@ if st.sidebar.button("Predict"):
 	prediction = model.predict(features)[0]
 	st.write("### Predicted Species:")
 	st.write(iris.target_names[prediction])
+
 
